@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			margin:100px;
+			background-color: green;
+			animation:gun 4s  linear 1s;
+
+		}
+		@keyframes move{
+			from{
+				transform: translateX(0px) rotate(0deg);
+			}
+			to{
+				transform: translateX(500px) rotate(666deg);
+			}
+		}
+		@keyframes gun{
+			0%{
+				transform: translateX(0px) translateY(0px);
+				background-color: green;
+				border-radius: 0px;
+			}
+			25%{
+				transform: translateX(500px) translateY(0);
+			}
+			50%{
+				transform: translateX(500px) translateY(300px);
+				border-radius: 50%;
+			}
+			75%{
+				transform: translateX(0) translateY(300px);
+			}
+			100%{
+				transform: translateX(0px) translateY(0px);
+				background-color: red;
+				border-radius: 0px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

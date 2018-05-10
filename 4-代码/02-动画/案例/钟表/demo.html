@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.clock{
+			width: 200px;
+			height: 200px;
+			margin:100px auto;
+			border:10px solid #000;
+			border-radius: 50%;
+			position: relative;
+		}
+		.line{
+			width: 4px;
+			height: 100%;
+			background-color: rgba(62,62,38,0.18);
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%);
+		}
+		.line1{
+			width: 6px;
+		}
+		.line2{
+			transform: rotate(30deg);
+		}
+		.line3{
+			transform: rotate(60deg);
+		}
+		.line4{
+			width: 6px;
+			transform: rotate(90deg);
+		}
+		.line5{
+			transform: rotate(120deg);
+		}
+		.line6{
+			transform: rotate(150deg);
+
+		}
+		.cover,.dotted{
+			width: 160px;
+			height: 160px;
+			border-radius: 50%;
+			background-color: white;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);;
+		}
+		.dotted{
+			width: 20px;
+			height: 20px;
+			background-color: black;
+		}
+		.hour{
+			width: 6px;
+			height: 60px;
+			background-color: pink;
+			position: absolute;
+			left: 50%;
+			margin-left: -3px;
+			top:40px;
+			transform-origin: center bottom;
+			animation: move 216000s steps(60) linear infinite;
+		}
+		.minute{
+			width: 4px;
+			height: 70px;
+			background-color: deeppink;
+			position: absolute;
+			left: 50%;
+			margin-left: -2px;
+			top:30px;
+			transform-origin: center bottom;
+			animation: move 3600s steps(60) infinite;
+		}
+		.second{
+			width: 2px;
+			height: 80px;
+			background-color: green;
+			position: absolute;
+			left: 50%;
+			margin-left: -1px;
+			top:20px;
+			transform-origin: center bottom;
+			animation: move 60s steps(60) infinite;
+		}
+		@keyframes move{
+			0%{
+				transform: rotate(0deg);
+			}
+			100%{
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="clock">
+		<div class="line line1"></div>
+		<div class="line line2"></div>
+		<div class="line line3"></div>
+		<div class="line line4"></div>
+		<div class="line line5"></div>
+		<div class="line line6"></div>
+		<div class="cover"></div>
+		<div class="hour"></div>
+		<div class="minute"></div>
+		<div class="second"></div>
+		<div class="dotted"></div>
+	</div>
+</body>
+</html>
